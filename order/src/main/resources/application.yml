@@ -1,0 +1,24 @@
+spring:
+  mvc:
+
+  application:
+    #服务名
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 192.168.2.87:8847
+      discovery:
+#        nacos客户端登录名称
+        username: nacos
+#         nacos客户端登录密码
+        password: nacos
+#        命名空间
+        namespace: public
+        group: DEFAULT_GROUP
+#        false为永久实例，true表示临时实例
+        ephemeral: true
+#        service:  ${spring.application.name:}
+#        weight: 1
+server:
+  port: 8000
+
